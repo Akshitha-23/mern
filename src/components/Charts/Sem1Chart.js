@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Bar } from "react-chartjs-2";
-import '../PerformancePage.css';
 import './SemCharts.css';
 
 export default function Sem1Chart() {

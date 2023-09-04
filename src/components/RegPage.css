@@ -5,7 +5,7 @@
   min-height: 100vh; /* Set minimum height to fill the viewport */
   background-size:contain;/* Ensure the background image covers the container */
   background-repeat: no-repeat; /* Prevent background image repetition */
-  background-position:left; /* Center the background image */
+  background-position:70px 50px; /* Center the background image */
   background-attachment: fixed; /* Fixed background image */
   background-color: #fff; /* Fallback background color */
   background-image: url('./register.jpeg.jpg'); /* Path to your background image */

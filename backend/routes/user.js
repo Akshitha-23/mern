@@ -1,5 +1,42 @@
 const router = require('express').Router();
 let User = require('../models/user_auth.model');
+
+router.route('/').get((req,res) => {
+   User.find()
+   .then(students => res.json(students))
+   .catch(err=> res.status(400).json('Error : '+ err));
+});
+
+router.route('/:roll')
+  .get((req, res) => {
+    User.findOne({ rollnumber: req.params.roll })
+      .then(student => {
+        if (!student) {
+          return res.status(404).json({ error: 'User not found' });
+        }
+
+        res.json(student);
+      })
+      .catch(err => res.status(400).json({ error: 'Error: ' + err }));
+  })
+  .put((req, res) => {
+    const { firstname, secondname, mobile } = req.body;
+   console.log(firstname);
+    User.findOneAndUpdate(
+      { rollnumber: req.params.roll },
+      { $set: { firstname, secondname, mobile } },
+      { new: true }
+    )
+      .then(updatedStudent => {
+        if (!updatedStudent) {
+          return res.status(404).json({ error: 'User not found' });
+        }
+
+        res.json(updatedStudent);
+      })
+      .catch(err => res.status(400).json({ error: 'Error: ' + err }));
+  });
+
 router.route('/register').post(async (req,res) =>
 {
    try {

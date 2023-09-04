@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Bar,Pie } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
-import { Size } from 'react-bootstrap/lib/utils/StyleConfig';
+//import { Size } from 'react-bootstrap/lib/utils/StyleConfig';
 import './PerformancePage.css';
 
 function PerformancePage() {

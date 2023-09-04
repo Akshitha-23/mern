@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import './LoginPage.css'; // Import the CSS file for styling
 import { useHistory } from 'react-router-dom';
 
-const LoginPage = () => {
+const LoginPage = ({onLogin } ) => {
   const history = useHistory();
   const [rollnumber, setRollNumber] = useState('');
   const [password, setPassword] = useState('');
 
   const handleRollNumberChange = (event) => {
     setRollNumber(event.target.value);
+    
   };
 
   const handlePasswordChange = (event) => {
@@ -16,6 +17,7 @@ const LoginPage = () => {
   };
 
   async function loginUser(event) {
+ 
     event.preventDefault();
     const response = await fetch('http://localhost:5000/user/login', {
       method: 'POST',
@@ -31,9 +33,14 @@ const LoginPage = () => {
     const data = await response.json();
     console.log(data);
 
+
     if (data.user) {
-      window.location.href = '/profile-page?roll=' + rollnumber;
+      console.log(rollnumber);
+      localStorage.setItem('userData',(rollnumber));
+      onLogin(rollnumber);
+      //window.location.href = '/profile-page?roll=' + rollnumber;
     } else {
+      onLogin(null);
       alert('Please check your username and password');
     }
 

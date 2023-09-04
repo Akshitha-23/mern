@@ -1,0 +1,171 @@
+.profile-page {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Set minimum height to fill the viewport */
+  background-size: contain;/* Ensure the background image covers the container */
+  background-repeat: no-repeat; /* Prevent background image repetition */
+  background-position: right 100px; /* Center the background image */
+  background-attachment: fixed; /* Fixed background image */
+  background-color: #fff; /* Fallback background color */
+  background-image: url('./profile-bg.avif'); /* Path to your background image */
+  
+  }
+  
+  
+  /* Profile container styles */
+  .profile-container {
+    margin-right: 300px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Header styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .header h3 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* Navigation styles */
+  .nav {
+   border-radius: 10px;
+    margin-top: 1rem;
+  }
+  
+  .nav span {
+    
+    cursor: pointer;
+    margin-right: 1rem;
+    font-weight: bold;
+    color: #007bff;
+    transition: color 0.3s;
+  }
+  
+  .nav span:hover {
+    color: #0056b3;
+  }
+
+  .details-card nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+  }
+  
+  /* Profile card styles */
+  .profile-card {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  .profile-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #007bff;
+  }
+  
+  .displayname {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Details card styles */
+  .details-card {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  .details-card #About{
+    margin-top: 20px;
+  }
+
+  .details-card #editprofile{
+    margin-top: 20px;
+  }
+  
+  .details-card form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .details-card label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .details-card input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .details-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .details-card button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* View Performance button styles */
+  .view-performance-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .view-performance-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Additional styling can be added as needed */
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .profile-container {
+      width: 90%;
+    }
+  }
+
+  p{
+    font-size: large;
+    font-weight: 600;
+  }

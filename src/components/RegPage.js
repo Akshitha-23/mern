@@ -103,7 +103,11 @@ function RegPage() {
         const response = await fetch(`http://localhost:5000/students/${rollnumber}`);
         if (response.ok) {
           const data = await response.json();
-          return data.exists; // Assuming your server returns an object with a "exists" property.
+          if(data===null)
+          {
+            return false;
+          }
+          return true; // Assuming your server returns an object with a "exists" property.
         } else {
           return false; // Handle other error cases here
         }
@@ -117,6 +121,12 @@ function RegPage() {
 
     if (!studentExists) {
       alert('Only valid students can register.');
+      setRollNumber('');
+      setPassword('');
+      setFirstName('');
+      setSecondName('');
+      // setEmail('');
+      setMobile('');
       return;
     }
 
@@ -135,7 +145,6 @@ function RegPage() {
     setPassword('');
     setFirstName('');
     setSecondName('');
-    // setEmail('');
     setMobile('');
   }
 

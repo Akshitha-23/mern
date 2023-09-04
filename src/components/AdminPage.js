@@ -8,7 +8,7 @@ class AdminPage extends React.Component {
       <div class="admin-page">
         <h1>Admin Page</h1>
         <input type="password" placeholder="Enter password" />
-        
+        <button>Login</button>
         <Link class="/admin" to="/forgot-password">Forgot Password</Link>
       </div>
     );
